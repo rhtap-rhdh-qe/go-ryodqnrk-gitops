@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: go-ryodqnrk
+  janus-idp.io/tekton: go-ryodqnrk
+  backstage.io/kubernetes-id: go-ryodqnrk
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-ryodqnrk
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
